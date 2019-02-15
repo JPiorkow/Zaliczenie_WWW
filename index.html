@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jarosław Piórkowski">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Budowa stron WWW Z3</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/carousel.css" rel="stylesheet">
+    <link href="assets/css/modal_login.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">Strona główna</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="o_autorze.html">O autorze</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="artykuly.html">Artykuły</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="zdjecia.html">Zdjecia</a>
+            </li>
+			<li class="nav-item active">
+              <a class="nav-link" href="kontakt.html">Kontakt<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        <!-- Button to open the modal login form -->
+		<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+			<!-- The Modal -->
+			<div id="id01" class="modal">
+			  <span onclick="document.getElementById('id01').style.display='none'"
+			class="close" title="Close Modal">&times;</span>
+
+			  <!-- Modal Content -->
+			  <form class="modal-content animate" action="/action_page.php">
+
+				<div class="container vertical-center">
+				  <label for="uname"><b>Username</b></label>
+				  <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+				  <p><button type="submit" OnClick="return wezZaloguj()">Login</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+				  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				  <span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			  </form>
+			</div> 
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+	
+	
+		
+	  <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Strona główna</h1>
+          <p class="lead text-muted">Witaj! To jest moja strona na zaliczenie przedmiotu Budowa stron WWW.</p>
+		  <hr class="my-4">
+		  <p>Każda podstrona zawiera nagłówek, stopkę, panel nawigacyjny wraz z linkami do wszystkich podstron oraz czesc główną która jest rożna dla każdej podstrony. W headerze każdej podstrony znajduje się informacja gdzie sie znajdujemy oraz "wyskakujący" panel logowania, formularz sprawdza czy wpisaliśmy dane i pokazuje informację w przypadku gdy tego nie zrobiliśmy. Na podstronie "kontakt" jest formularz do wysyłania wiadomości e-mail z odnośnikiem do poczty.</p>
+		  <p class="lead">
+		  <a class="btn btn-primary btn-lg" href="o_autorze.html" role="button">O mnie &raquo;</a>
+		  
+        </div>
+      </section>
+	  
+	  
+	  
+	 <!-- 
+		  <div class="jumbotron">
+		  <h1 class="display-4">Strona główna</h1>
+		  <br>
+		  <h1 class="lead">Witaj!</h1>
+		  <p class="lead">To jest moja strona na zaliczenie pracy domowej z przedmiotu Budowa stron WWW.</p>
+		  <hr class="my-4">
+		  <p>Każda podstrona zawiera nagłówek, stopkę, panel nawigacyjny wraz z linkami do wszystkich podstron oraz czesc główną która jest rożna dla każdej podstrony. W headerze każdej podstrony znajduje się informacja gdzie sie znajdujemy.</p>
+		  <p class="lead">
+			<a class="btn btn-primary btn-lg" href="o_autorze.html" role="button">O mnie &raquo;</a>
+		  </p>
+		</div> 
+	 -->
+		
+		
+      <!-- 
+	  
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-keyboard="true">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="photo/bies1.jpg" alt="First slide" style="object-fit:cover">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Rzucić wszystko...</h1>
+                <p>... I wyjechać w Bieszczady! Bieszczady – grupa dwóch pasm górskich w łańcuchu Karpat. Pasma Bieszczadów znajdują się między Przełęczą Łupkowską (640 m n.p.m.) a Przełęczą Wyszkowską (933 m n.p.m.).</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Wyjedź!</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="photo/zam1.jpg" alt="Second slide" style="object-fit:cover">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Lubisz zamki? Mamy coś dla ciebie!</h1>
+                <p>Zamek – zespół elementów warownych i budynków mieszkalnych powiązanych w zamknięty obwód obronny, powstały w ustroju feudalnym jako ośrodek władzy książęcej, siedziba możnowładcy, siedziba rycerza lub placówka militarna.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Zobacz więcej</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="photo/morze1.jpg" alt="Third slide" style="object-fit:cover">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>A może morze?</h1>
+                <p>Morze – naturalny zbiornik wodny, część oceanu, mniej lub bardziej wyraźnie oddzielona od pozostałych jego części brzegami kontynentu, wyspami lub wzniesieniem dna.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Zobacz mniej</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> 
+	  
+	  -->
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="photo/par1.jpg" alt="Generic placeholder image" width="140" height="140" style="object-fit:cover">
+            <h2>Artykuły</h2>
+            <p><a class="btn btn-secondary" href="artykuly.html" role="button">Przejdź &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="photo/shut.jpg" alt="Generic placeholder image" width="140" height="140" style="object-fit:cover">
+            <h2>Galeria</h2>
+            <p><a class="btn btn-secondary" href="zdjecia.html" role="button">Przejdź &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="photo/pasz.jpg" alt="Generic placeholder image" width="140" height="140" style="object-fit:cover">
+            <h2>Kontakt</h2>
+            <p><a class="btn btn-secondary" href="kontakt.html" role="button">Przejdź &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Do góry</a></p>
+        <p>&copy; 2018 Jarosław Piórkowski, Inc. &middot; <a href="#">Prywatność</a> &middot; <a href="#">Warunki</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="assets/js/vendor/holder.min.js"></script>
+	<script src="assets/js/javascript.js"></script>
+  </body>
+</html>

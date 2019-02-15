@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jarosław Piórkowski">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Artykuły</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/carousel.css" rel="stylesheet">
+    <link href="assets/css/comment.css" rel="stylesheet">
+    <link href="assets/css/modal_login.css" rel="stylesheet">
+	
+  </head>
+  
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">Strona główna</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="o_autorze.html">O autorze</a>
+            </li>
+			<li class="nav-item active">
+              <a class="nav-link" href="artykuly.html">Artykuły</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="zdjecia.html">Zdjecia</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        <!-- Button to open the modal login form -->
+		<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+			<!-- The Modal -->
+			<div id="id01" class="modal">
+			  <span onclick="document.getElementById('id01').style.display='none'"
+			class="close" title="Close Modal">&times;</span>
+
+			  <!-- Modal Content -->
+			  <form class="modal-content animate" action="/action_page.php">
+
+				<div class="container vertical-center">
+				  <label for="uname"><b>Username</b></label>
+				  <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+				  <p><button type="submit" OnClick="return wezZaloguj()">Login</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+				  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				  <span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			  </form>
+			</div> 
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+		<section class="jumbotron text-center">
+			<div class="container">
+			  <h1 class="jumbotron-heading">Artykuły</h1>
+			  <p class="lead text-muted">Tutaj są artykuły.</p>
+			</div>
+		</section>
+	  
+	  
+      <div class="container marketing">
+
+        <div class="row featurette mx-1">
+			<h2 class="featurette-heading">Pierwszy artykuł <br></h2>
+			<img src="photo/zakopianka.jpg" alt="LoL" style="width:100%; object-fit:cover;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus turpis turpis, commodo ac felis sit amet, aliquam convallis tortor. Quisque auctor at ante et dictum. Pellentesque maximus egestas libero sit amet cursus. Morbi tempor sagittis bibendum. Aliquam pulvinar, enim ut lacinia dignissim, nibh nisi vestibulum sem, eu rutrum arcu diam quis eros. Donec ac vehicula nibh. Nunc vulputate lectus sed erat ultrices aliquet. Aliquam ultricies fringilla urna, dictum bibendum ligula. Pellentesque vitae dui tellus. Aliquam consequat sem libero, sit amet varius lacus volutpat sed. Morbi tempor elit dolor, non consectetur nisl rutrum quis.</p>
+			<p>Vivamus maximus maximus metus, nec molestie purus. Maecenas sed mi non risus laoreet egestas sed imperdiet ipsum. Aliquam egestas ultrices sem aliquam facilisis. Praesent id nunc vel neque pretium hendrerit. Ut quis mollis velit. Donec enim lectus, tempus vel metus vel, pellentesque aliquam tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent porttitor non magna quis tempus. Fusce aliquet nisl non consequat viverra. Curabitur et porttitor dui, eu dignissim turpis.</p>
+			<p>Proin a sodales augue, eget varius justo. In a cursus orci. Praesent quis augue et tortor mattis sollicitudin. Etiam laoreet ut augue eget ultricies. Aenean vel dui non dolor cursus vehicula. Aenean et ipsum id leo fringilla suscipit. Quisque iaculis ipsum sit amet ligula interdum, eu varius lorem laoreet. Quisque ac nibh sed neque consectetur faucibus et sed ipsum. Ut aliquet, diam non aliquet tincidunt, odio enim convallis purus, ut vestibulum orci tellus sit amet eros. Fusce eget neque accumsan, maximus dui quis, eleifend purus.</p>
+			<p>Autor: Imię Nazwisko</p>
+			
+			<div class="container pb-cmnt-container">
+				<div class="row">
+					<div class="col-md-4 ">
+						<div class="card card-info">
+							<div class="card-block">
+								<textarea placeholder="Napisz tu swój komentarz!" class="pb-cmnt-textarea"></textarea>
+								<form class="form-inline">
+									<button class="btn btn-primary float-xs-right" type="button">Dodaj komentarz</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette mx-1">
+			<h2 class="featurette-heading">Drugi artykuł <br></h2>
+			<img src="photo/karetka.jpg" alt="LoL" style="width:100%; object-fit:cover;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus turpis turpis, commodo ac felis sit amet, aliquam convallis tortor. Quisque auctor at ante et dictum. Pellentesque maximus egestas libero sit amet cursus. Morbi tempor sagittis bibendum. Aliquam pulvinar, enim ut lacinia dignissim, nibh nisi vestibulum sem, eu rutrum arcu diam quis eros. Donec ac vehicula nibh. Nunc vulputate lectus sed erat ultrices aliquet. Aliquam ultricies fringilla urna, dictum bibendum ligula. Pellentesque vitae dui tellus. Aliquam consequat sem libero, sit amet varius lacus volutpat sed. Morbi tempor elit dolor, non consectetur nisl rutrum quis.</p>
+			<p>Vivamus maximus maximus metus, nec molestie purus. Maecenas sed mi non risus laoreet egestas sed imperdiet ipsum. Aliquam egestas ultrices sem aliquam facilisis. Praesent id nunc vel neque pretium hendrerit. Ut quis mollis velit. Donec enim lectus, tempus vel metus vel, pellentesque aliquam tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent porttitor non magna quis tempus. Fusce aliquet nisl non consequat viverra. Curabitur et porttitor dui, eu dignissim turpis.</p>
+			<p>Proin a sodales augue, eget varius justo. In a cursus orci. Praesent quis augue et tortor mattis sollicitudin. Etiam laoreet ut augue eget ultricies. Aenean vel dui non dolor cursus vehicula. Aenean et ipsum id leo fringilla suscipit. Quisque iaculis ipsum sit amet ligula interdum, eu varius lorem laoreet. Quisque ac nibh sed neque consectetur faucibus et sed ipsum. Ut aliquet, diam non aliquet tincidunt, odio enim convallis purus, ut vestibulum orci tellus sit amet eros. Fusce eget neque accumsan, maximus dui quis, eleifend purus.</p>
+			<p>Autor: Imię Nazwisko</p>
+			
+			<div class="container pb-cmnt-container">
+				<div class="row">
+					<div class="col-md-4 ">
+						<div class="card card-info">
+							<div class="card-block">
+								<textarea placeholder="Napisz tu swój komentarz!" class="pb-cmnt-textarea"></textarea>
+								<form class="form-inline">
+									<button class="btn btn-primary float-xs-right" type="button">Dodaj komentarz</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette mx-1">
+			<h2 class="featurette-heading">Trzeci artykuł <br></h2>
+			<img src="photo/gotowanie.jpg" alt="LoL" style="width:100%; object-fit:cover;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus turpis turpis, commodo ac felis sit amet, aliquam convallis tortor. Quisque auctor at ante et dictum. Pellentesque maximus egestas libero sit amet cursus. Morbi tempor sagittis bibendum. Aliquam pulvinar, enim ut lacinia dignissim, nibh nisi vestibulum sem, eu rutrum arcu diam quis eros. Donec ac vehicula nibh. Nunc vulputate lectus sed erat ultrices aliquet. Aliquam ultricies fringilla urna, dictum bibendum ligula. Pellentesque vitae dui tellus. Aliquam consequat sem libero, sit amet varius lacus volutpat sed. Morbi tempor elit dolor, non consectetur nisl rutrum quis.</p>
+			<p>Vivamus maximus maximus metus, nec molestie purus. Maecenas sed mi non risus laoreet egestas sed imperdiet ipsum. Aliquam egestas ultrices sem aliquam facilisis. Praesent id nunc vel neque pretium hendrerit. Ut quis mollis velit. Donec enim lectus, tempus vel metus vel, pellentesque aliquam tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent porttitor non magna quis tempus. Fusce aliquet nisl non consequat viverra. Curabitur et porttitor dui, eu dignissim turpis.</p>
+			<p>Proin a sodales augue, eget varius justo. In a cursus orci. Praesent quis augue et tortor mattis sollicitudin. Etiam laoreet ut augue eget ultricies. Aenean vel dui non dolor cursus vehicula. Aenean et ipsum id leo fringilla suscipit. Quisque iaculis ipsum sit amet ligula interdum, eu varius lorem laoreet. Quisque ac nibh sed neque consectetur faucibus et sed ipsum. Ut aliquet, diam non aliquet tincidunt, odio enim convallis purus, ut vestibulum orci tellus sit amet eros. Fusce eget neque accumsan, maximus dui quis, eleifend purus.</p>
+			<p>Autor: Imię Nazwisko</p>
+			
+			<div class="container pb-cmnt-container">
+				<div class="row">
+					<div class="col-md-4 ">
+						<div class="card card-info">
+							<div class="card-block">
+								<textarea placeholder="Napisz tu swój komentarz!" class="pb-cmnt-textarea"></textarea>
+								<form class="form-inline">
+									<button class="btn btn-primary float-xs-right" type="button">Dodaj komentarz</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Do góry</a></p>
+        <p>&copy; 2018 Jarosław Piórkowski, Inc. &middot; <a href="#">Prywatność</a> &middot; <a href="#">Warunki</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+	<script src="assets/js/javascript.js"></script>
+  </body>
+</html>

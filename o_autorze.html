@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jarosław Piórkowski">
+    <link rel="icon" href="favicon.ico">
+
+    <title>O autorze</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/carousel.css" rel="stylesheet">
+    <link href="assets/css/modal_login.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">Strona główna</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Główna</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="o_autorze.html">O autorze</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="artykuly.html">Artykuły</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="zdjecia.html">Zdjecia</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="kontakt.html">Kontakt<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        <!-- Button to open the modal login form -->
+		<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+			<!-- The Modal -->
+			<div id="id01" class="modal">
+			  <span onclick="document.getElementById('id01').style.display='none'"
+			class="close" title="Close Modal">&times;</span>
+
+			  <!-- Modal Content -->
+			  <form class="modal-content animate" action="/action_page.php">
+
+				<div class="container vertical-center">
+				  <label for="uname"><b>Username</b></label>
+				  <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required><br>
+
+				  <p><button type="submit" OnClick="return wezZaloguj()">Login</button>
+				  <label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				  </label>
+				</div>
+
+				<div class="container" style="background-color:#f1f1f1">
+				  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				  <span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			  </form>
+			</div> 
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+	  <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">O autorze</h1>
+		  <p class="lead text-muted">"Zostań na chwilę i posłuchaj..."</p>	
+		  <hr class="my-4">	
+		  <p class="lead text-muted">Jestem studentem i chodzę na zajęcia, a ponadto:</p>	  
+        </div>
+      </section>
+	  
+
+      <div class="container marketing">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Lubię czytać <br></h2>
+            <p class="lead">
+				<ul class="a">
+					<li>"Nocny Patrol" - Siergiej Łukjanienko</li>
+					<li>"Gra Endera" - Orson Scott Card</li>
+					<li>"Światło wirtualne" - William Gibson</li>
+					<li>"Diuna" - Frank Herbert</li>
+				</ul>
+			</p>
+          </div>
+          <div class="col-md-5">
+            <img class="embed-responsive embed-responsive-3by4" src="photo/book.jpg" alt="Generic placeholder image" width="auto" height="500" style="object-fit:cover">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Lubię pisać <br></h2>
+            <p class="lead">
+				<ul class="a">
+					<li>Strony WWW</li>
+					<li>Prace domowe</li>
+					<li>Style CSS</li>
+				</ul>
+			</p>
+		  </div>
+          <div class="col-md-5 order-md-1">
+            <img class="embed-responsive embed-responsive-3by4" src="photo/jeden.jpg" alt="Generic placeholder image" width="auto" height="500" style="object-fit:cover">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Lubię się uczyć <br></h2>
+            <p class="lead">
+				<ul class="a">
+					<li>Budowa stron WWW</li>
+				</ul>
+			</p>
+		  </div>
+          <div class="col-md-5">
+            <img class="embed-responsive embed-responsive-3by4" src="photo/ostatni.jpg" alt="Generic placeholder image" width="auto" height="500" style="object-fit:cover" >
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Do góry</a></p>
+        <p>&copy; 2018 Jarosław Piórkowski, Inc. &middot; <a href="#">Prywatność</a> &middot; <a href="#">Warunki</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="assets/js/vendor/holder.min.js"></script>
+	<script src="assets/js/javascript.js"></script>
+  </body>
+</html>
